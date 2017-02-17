@@ -1,8 +1,11 @@
 function coupon_please() {
   var qtd = parseInt(document.getElementById("char").value);
+  var prefix = document.getElementById("prefix").value.trim();
+
+  if (qtd < 5) qtd = 2;
+  
   var coupon = gimme_my_coupon(qtd);
-  debugger;
-  document.getElementById("coupon").innerHTML = "Generated coupon: " + coupon;
+  document.getElementById("coupon").innerHTML = prefix + coupon;
 }
 
 
